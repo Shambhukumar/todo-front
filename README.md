@@ -1,3 +1,6 @@
+## Backend = https://github.com/Shambhukumar/todo
+## liveSite = https://sams-todo-front.herokuapp.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
