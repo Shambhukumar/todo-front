@@ -1,0 +1,77 @@
+.Login{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
+    &-form{
+        span{
+            text-align: center;
+            font-family: 'Style Script', cursive;
+            font-size: 2.5rem;
+        }
+        &-error{
+            text-align: center;
+            color: red;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        background-color: rgb(250, 245, 245);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 10px 20px;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        &-input{
+            display: flex;
+            flex-direction: column;
+            label{
+                padding-bottom: 5px;
+            }
+            input[type="email"],input[type="password"]{
+                padding: 10px 15px;
+                border: none;
+                border-radius: 10px;
+                background-color: rgba(120, 179, 219, 0.767);
+                &:focus{
+                    outline: none
+                }
+            }
+        }
+
+     &-button{
+         margin-top: 5px;
+         cursor: pointer;
+
+         border: none;
+
+         
+         & {
+             background-image: linear-gradient(to right, #24C6DC 0%, #514A9D  51%, #24C6DC  100%)}
+         & {
+            // margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            // box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          &:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+     }
+    }
+}

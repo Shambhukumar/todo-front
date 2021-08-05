@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import {useEffect} from "react"
 import './App.css';
+import Login from "./Component/Login/Login";
+import Todo from "./Component/Todo/Todo";
+import {getTodo} from "./store/actions/auth";
+import {connect} from "react-redux";
 
-function App() {
+const App=(props)=> {
+
+  useEffect(() => {
+    props.getTodo()
+  }, [props.isAuthenticated])
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* {console.log(props.isAuthenticated)} */}
+     { props.isAuthenticated ? <Todo/> : <Login/>}
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) =>{
+  console.log(state)
+  return{
+    user: state.user,
+    isAuthenticated: state.user.isAuthenticated
+  }
+    
+}
+
+const mapDispatchToProps=(dispatch)=>{
+  return{
+     getTodo: ()=> getTodo(dispatch)
+  }
+ 
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
