@@ -5,6 +5,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<h4>Please change the axios instaance base url to your localhost to get the app work locally</h4>
+
 ## Available Scripts
 
 In the project directory, you can run:
