@@ -10,8 +10,6 @@ const Login=(props)=> {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     props.Login(email,password)
-    console.log(props.user)
-
   }
   return (
     <div className="Login">

@@ -11,14 +11,12 @@ const Todo = (props) => {
         e.preventDefault();
         const content = document.getElementById("Add-item").value;
         const priority = document.getElementById("Add-priority").value;
-        console.log(content, priority)
         props.saveTodo(content, priority)
     }
     const updateToList = (e,id) =>{
         e.preventDefault();
         const content = document.getElementById("Update-item").value;
         const priority = document.getElementById("Update-priority").value;
-        console.log(content,priority)
         props.updateTodo(content,priority,id)
         setEdit("")
     }

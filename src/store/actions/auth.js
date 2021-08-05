@@ -16,7 +16,7 @@ export const authLogin = async(email,password, dispatch) =>{
         email,
         password
     })
-    console.log(res)
+    
    return dispatch({type: AUTH_LOGIN, payload: res.data})
 }catch(e){
     if(e.response.status === 401){
@@ -28,10 +28,10 @@ export const authLogin = async(email,password, dispatch) =>{
 export const getTodo = async(dispatch)=>{
     try{
     const res = await Axios.get("/getdata")
-    console.log(res)
+    
     return dispatch({type: GET_TODO, payload: res.data})
     }catch(e){
-        console.log("inside error")
+       
      return dispatch({type: AUTH_FAILED, payload: null})
     }
     
@@ -42,7 +42,7 @@ export const saveTodo = async(content,priority,dispatch)=>{
         content,
         priority
     })
-    console.log(res)
+    
     return dispatch({type: SAVE_TODO, payload: res.data})
     
 }
@@ -53,7 +53,7 @@ export const updateTodo = async(content, priority,id,dispatch)=>{
         priority,
         id
     })
-    console.log(res)
+    
     return dispatch({type: UPDATE_TODO, payload: res.data})
 }
 
@@ -62,10 +62,10 @@ export const sortTodo = async(obj,dispatch)=>{
     const res = await Axios.post("/getsort",{
         obj
     })
-    console.log(res)
+    
     return dispatch({type: SORT_TODO, payload: res.data})
     }catch(e){
-        console.log("inside error")
+       
      return dispatch({type: AUTH_FAILED, payload: null})
     }
     
@@ -75,7 +75,7 @@ export const deleteTodo = async(id,dispatch)=>{
     const res = await Axios.post("/deletetodo",{
         id
     })
-    console.log(res)
+    
     return dispatch({type: DELETE_TODO, payload: res.data})
 }
 

@@ -20,7 +20,7 @@ const authReducer = (state=intialState, {type,payload}) =>{
 
             }
             case GET_TODO:
-                // console.log(payload.isAuthenticated)
+                
                 return{
                     ...state,
                     todo: payload.data,
@@ -29,14 +29,14 @@ const authReducer = (state=intialState, {type,payload}) =>{
     
                 }
                 case AUTH_ERROR:
-                    // console.log(payload.isAuthenticated)
+                    
                     return{
                         ...state,
                         ErrorMessage: payload
         
                     }
                 case SAVE_TODO:
-                    // console.log(payload.isAuthenticated)
+                    
                     return{
                         ...state,
                         todo: payload.data,
@@ -45,7 +45,7 @@ const authReducer = (state=intialState, {type,payload}) =>{
         
                     }
                     case UPDATE_TODO:
-                        // console.log(payload.isAuthenticated)
+                        
                         return{
                             ...state,
                             todo: payload.data,
@@ -54,7 +54,7 @@ const authReducer = (state=intialState, {type,payload}) =>{
             
                         }
                         case SORT_TODO:
-                            // console.log(payload.isAuthenticated)
+                            
                             return{
                                 ...state,
                                 todo: payload.data,
@@ -63,7 +63,7 @@ const authReducer = (state=intialState, {type,payload}) =>{
                 
                             }
                     case DELETE_TODO:
-                        // console.log(payload.isAuthenticated)
+                        
                         return{
                             ...state,
                             todo: payload.data,

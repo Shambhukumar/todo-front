@@ -14,14 +14,12 @@ const App=(props)=> {
 
   return (
     <div>
-      {/* {console.log(props.isAuthenticated)} */}
      { props.isAuthenticated ? <Todo/> : <Login/>}
     </div>
   );
 }
 
 const mapStateToProps = (state) =>{
-  console.log(state)
   return{
     user: state.user,
     isAuthenticated: state.user.isAuthenticated
